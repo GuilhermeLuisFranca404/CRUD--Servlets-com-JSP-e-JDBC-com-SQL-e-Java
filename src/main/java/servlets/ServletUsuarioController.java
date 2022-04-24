@@ -9,13 +9,13 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import dao.DAOUsuarioRepository;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.MultipartConfig;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import model.ModelLogin;
 
 
@@ -24,7 +24,7 @@ import model.ModelLogin;
  * Servlet implementation class ServletUsuarioController
  */
 @MultipartConfig //pra preparar para upload
-@WebServlet(urlPatterns = { "/ServletUsuarioController"})
+@WebServlet(urlPatterns = {"/principal/ServletUsuarioController", "/ServletUsuarioController"})
 public class ServletUsuarioController extends  ServletGenericUtil{
 
 	private static final long serialVersionUID = 1L;
